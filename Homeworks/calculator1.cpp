@@ -1,26 +1,61 @@
-/*
-Дополните  Calculator базовыми арифметическими операциями:
-1) Суммирование, разность, умножение
-2) Деление всех видов (целое, с остатком, обычное деление)
-3) Не забудьте учесть особенности типов и поиграться с перегрузками
+#include <iostream>
+#include <cassert>
 
-В main нужно придумать запустить свой простенький тест (например, проверить каждую операцию по очереди)
+int summa(int a, int b) {
+    return a + b;
+}
 
+double summa(double a, double b) {
+    return a + b;
+}
 
-Не забывайте про кодстайл, за решение задачки дают семинарские баллы)
-*/
+int raznost(int a, int b) {
+    return a - b;
+}
 
+double raznost(double a, double b) {
+    return a - b;
+}
 
-// Базовые методы для арифм. операций
-int Add(const int a, const int b);
+int umnojit(int a, int b) {
+    return a * b;
+}
 
-int Multiply(const int a, const int b);
+double umnojit(double a, double b) {
+    return a * b;
+}
 
-    ...
+int Delitnatselo(int a, int b) {
+    return a / b;
+}
+
+int ostatok(int a, int b) {
+    return a % b;
+}
+
+double delitprosto(double a, double b) {
+    return a / b;
+}
 
 int main() {
-  int a = 5;
-  int b = 7;
-  
-  assert((Add(a, b) != 12) && "Мы не смогли сложить!");
+    int a = 5;
+    int b = 7;
+    assert(summa(a, b) == 12);
+    assert(raznost(a, b) == -2);
+    assert(umnojit(a, b) == 35);
+    int c = 5;
+    int d = 2;
+    assert(Delitnatselo(c, d) == 2);
+    assert(ostatok(c, d) == 1);
+
+
+    double x = 5.0;
+    double y = 2.0;
+
+    assert(summa(x, y) == 7.0);
+    assert(delitprosto(x, y) == 2.5);
+
+    std::cout << "testi proydeni" << '\n';
+
+    return 0;
 }
