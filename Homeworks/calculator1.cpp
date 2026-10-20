@@ -1,61 +1,62 @@
 #include <iostream>
 #include <cassert>
-
-int summa(int a, int b) {
-    return a + b;
+int Summ(int first_number, int second_number) {
+  return first_number + second_number;
 }
 
-double summa(double a, double b) {
-    return a + b;
+double Summ(double first_number, double second_number) {
+  return first_number + second_number;
 }
 
-int raznost(int a, int b) {
-    return a - b;
+int Subtract(int first_number, int second_number) {
+  return first_number - second_number;
 }
 
-double raznost(double a, double b) {
-    return a - b;
+double Subtract(double first_number, double second_number) {
+  return first_number - second_number;
 }
 
-int umnojit(int a, int b) {
-    return a * b;
+int Multiply(int first_number, int second_number) {
+  return first_number * second_number;
 }
 
-double umnojit(double a, double b) {
-    return a * b;
+double Multiply(double first_number, double second_number) {
+  return first_number * second_number;
 }
 
-int Delitnatselo(int a, int b) {
-    return a / b;
+int DivideInt(int first_number, int second_number) {
+  return first_number / second_number;
 }
 
-int ostatok(int a, int b) {
-    return a % b;
+int CountRemainder(int first_number, int second_number) {
+  return first_number % second_number;
 }
 
-double delitprosto(double a, double b) {
-    return a / b;
+double DivideNormally(double first_number, double second_number) {
+  return first_number / second_number;
 }
 
 int main() {
-    int a = 5;
-    int b = 7;
-    assert(summa(a, b) == 12);
-    assert(raznost(a, b) == -2);
-    assert(umnojit(a, b) == 35);
-    int c = 5;
-    int d = 2;
-    assert(Delitnatselo(c, d) == 2);
-    assert(ostatok(c, d) == 1);
+  int test_num1 = 5;
+  int test_num2 = 7;
 
+  assert(Summ(test_num1, test_num2) == 12);
+  assert(Subtract(test_num1, test_num2) == -2);
+  assert(Multiply(test_num1, test_num2) == 35);
 
-    double x = 5.0;
-    double y = 2.0;
+  int test_dividend = 5;
+  int test_divisor = 2;
 
-    assert(summa(x, y) == 7.0);
-    assert(delitprosto(x, y) == 2.5);
+  assert(DivideInt(test_dividend, test_divisor) == 2);
+  assert(CountRemainder(test_dividend, test_divisor) == 1);
 
-    std::cout << "testi proydeni" << '\n';
+  double test_real_num1 = 5.0;
+  double test_real_num2 = 2.0;
 
-    return 0;
+  assert(Summ(test_real_num1, test_real_num2) == 7.0);
+  assert(DivideNormally(test_real_num1, test_real_num2) == 2.5);
+
+  std::cout << "Successfully tested, no mistakes were found!" << '\n';
+
+  return 0;
 }
