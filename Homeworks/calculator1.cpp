@@ -25,14 +25,17 @@ double Multiply(double first_number, double second_number) {
 }
 
 int DivideInt(int first_number, int second_number) {
+  assert(second_number != 0);
   return first_number / second_number;
 }
 
 int CountRemainder(int first_number, int second_number) {
+  assert(second_number != 0);
   return first_number % second_number;
 }
 
 double DivideNormally(double first_number, double second_number) {
+  assert(second_number != 0);
   return first_number / second_number;
 }
 
